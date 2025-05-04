@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Feedback Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title">Website Survey Form</h1>
+  <p id="description">This short survey helps us improve your experience with our website. We value your feedback!</p>
+
+  <form id="survey-form">
+    <!-- User Info -->
+    <fieldset>
+      <label id="name-label">Name:
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+      </label>
+      <label id="email-label">Email:
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+      </label>
+      <label id="number-label">Age:
+        <input id="number" name="age" type="number" placeholder="Enter your age" min="13" max="120" required>
+      </label>
+    </fieldset>
+
+    <!-- Frequency -->
+    <fieldset>
+      <label for="dropdown">How often do you use this website?
+        <select id="dropdown" name="frequency">
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="occasionally">Occasionally</option>
+          <option value="first-time">First time</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <!-- Rating -->
+    <fieldset>
+      <legend>How would you rate this website?</legend>
+      <label>
+        <input type="radio" name="rating" value="Excellent"> Excellent
+      </label>
+      <label>
+        <input type="radio" name="rating" value="Good"> Good
+      </label>
+      <label>
+        <input type="radio" name="rating" value="Fair"> Fair
+      </label>
+      <label>
+        <input type="radio" name="rating" value="Poor"> Poor
+      </label>
+    </fieldset>
+
+    <!-- Features -->
+    <fieldset>
+      <legend>Which features did you interact with today? (Select all that apply)</legend>
+      <label>
+        <input type="checkbox" name="features" value="Navigation Menu"> Navigation Menu
+      </label>
+      <label>
+        <input type="checkbox" name="features" value="Search Bar"> Search Bar
+      </label>
+      <label>
+        <input type="checkbox" name="features" value="Product Pages"> Product Pages
+      </label>
+      <label>
+        <input type="checkbox" name="features" value="Contact Form"> Contact Form
+      </label>
+      <label>
+        <input type="checkbox" name="features" value="Media Content"> Media Content
+      </label>
+    </fieldset>
+
+    <!-- Feedback -->
+    <fieldset>
+      <label for="feedback">Any suggestions or comments to improve your experience?</label>
+      <textarea id="feedback" name="feedback" rows="3" cols="30" placeholder="Feedback goes here"></textarea>
+    </fieldset>
+
+    <!-- Submit -->
+    <input type="submit" id="submit" value="Submit">
+  </form>
+</body>
+</html>
