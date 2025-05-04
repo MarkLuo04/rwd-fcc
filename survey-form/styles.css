@@ -22,9 +22,11 @@ body {
 /* Center the form and constrain width */
 form {
     background-color: #1f2937;
-    max-width: 600px;
+    width: 80%;
+    max-width: 800px;
+    min-width: 300px;
     margin: 50px auto;
-    padding: 30px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
