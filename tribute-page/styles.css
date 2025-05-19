@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: rgb(159, 137, 163);
+    padding: 2em 1em;
+    font-family: sans-serif, Geneva, Tahoma;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#title {
+}
+
+#tribute-info {
+    padding: 1em 3em;
+}
+
+#img-div {
+    background-color: aliceblue;
+    padding: 1em;
+}
+
+#image {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+}
