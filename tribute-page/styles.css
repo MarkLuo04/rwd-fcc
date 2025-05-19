@@ -1,31 +1,77 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-main {
-    background-color: rgb(159, 137, 163);
-    padding: 2em 1em;
-    font-family: sans-serif, Geneva, Tahoma;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+/* Body Styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #0a0a0a;
+    color: #f2f2f2;
+    line-height: 1.6;
+    padding: 1.25rem;
+    font-size: 1rem;
 }
 
+/* Main Container */
+main#main {
+    max-width: 90vw;
+    width: 100%;
+    max-width: 50rem;
+    margin: 2.5rem auto;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
 #title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    color: #facc15;
 }
 
+/* Tribute Info */
 #tribute-info {
-    padding: 1em 3em;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d1d5db;
 }
 
-#img-div {
-    background-color: aliceblue;
-    padding: 1em;
-}
-
+/* Image Styling */
 #image {
+    display: block;
     max-width: 100%;
-    width: 200px;
     height: auto;
+    margin: 0 auto;
+    border-radius: 0.625rem;
+    border: 0.2rem solid #facc15;
+}
+
+/* Caption Styling */
+#img-caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.75rem;
+    color: #9ca3af;
+}
+
+/* Tribute Link */
+#tribute-link {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #3b82f6;
+    transition: color 0.3s ease;
+}
+
+#tribute-link:hover {
+    color: #60a5fa;
 }
