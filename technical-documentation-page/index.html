@@ -3,9 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Documentation Page</title>
+    <title>Common Git and GitHub Commands Documentation</title>
 </head>
 <body>
-    
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>
+                <h2>Introduction</h2>
+            </header>
+            <p>Git is a distributed version control system that helps developers track changes in their codebase over time.
+                Unlike centralized systems, Git allows each user to have a full copy of the repository, enabling offline work
+                and better redundancy.</p>
+            <p>GitHub is a web-based platform built on top of Git. It provides hosting for repositories, along with
+                collaborative features like issue tracking, pull requests, and project boards. Developers use GitHub to share
+                their code, contribute to open-source projects, and collaborate with team members.</p>
+            <p>Version control helps developers manage project history, experiment safely through branches, and work with others
+                without overwriting each other’s work. It’s a core tool for modern software development, essential for both solo
+                projects and large-scale team collaborations.</p>
+        </section>
+        
+        <section class="main-section" id="Git_Configuration_and_Setup">
+            <header>
+                <h2>Git Configuration and Setup</h2>
+            </header>
+            <p>Before you start using Git, it’s important to configure your identity and set up basic settings. This ensures
+                that your commits are properly attributed and that you can connect to remote repositories securely.</p>
+            <ul>
+                <li><code>git config --global user.name "Your Name"</code>: Sets your name in all commits.</li>
+                <li><code>git config --global user.email "your.email@example.com"</code>: Sets your email in all commits.</li>
+                <li><code>ssh-keygen -t ed25519 -C "your.email@example.com"</code>: Generates an SSH key for secure GitHub
+                    authentication.</li>
+            </ul>
+            <p>You can also configure other settings like line endings or set up handy aliases to simplify common commands.</p>
+        </section>
+        
+        <section class="main-section" id="Basic_Git_Commands">
+            <header>
+                <h2>Basic Git Commands</h2>
+            </header>
+            <p>Before working with Git, you need to understand some foundational commands:</p>
+            <ul>
+                <li><code>git init</code>: Initializes a new Git repository in your current directory, creating a .git folder
+                    that tracks all changes.</li>
+                <li><code>git status</code>: Shows the current state of your working directory, including changes staged for
+                    commit or untracked files.</li>
+                <li><code>git add</code>: Stages changes, telling Git which modifications you want to include in your next
+                    commit.</li>
+                <li><code>git commit</code>: Saves a snapshot of the staged changes, recording them permanently in the project
+                    history with a commit message.</li>
+                <li><code>git log</code>: Shows a list of past commits, helping you trace the project’s evolution and review
+                    past changes.</li>
+            </ul>
+            <p>These commands are the backbone of Git workflows and form the foundation for more advanced operations.</p>
+        </section>
+        
+        <section class="main-section" id="Using_.gitignore">
+            <header>
+                <h2>Using .gitignore</h2>
+            </header>
+            <p>The <code>.gitignore</code> file tells Git which files or directories to ignore. This is useful for excluding
+                temporary files, logs, or system-generated content that shouldn’t be tracked in the repository.</p>
+            <ul>
+                <li>Common entries include <code>node_modules/</code> for Node.js projects or <code>*.log</code> for log files.
+                </li>
+                <li>Edit the <code>.gitignore</code> file in the root of your repository and add paths or patterns.</li>
+                <li>If you accidentally tracked a file before adding it to <code>.gitignore</code>, remove it with
+                    <code>git rm --cached &lt;file&gt;</code>.</li>
+            </ul>
+            <p>Keeping your repository clean and focused helps avoid bloating it with unnecessary files.</p>
+        </section>
+        
+        <section class="main-section" id="Branching_and_Merging">
+            <header>
+                <h2>Branching and Merging</h2>
+            </header>
+            <p>Branches allow you to work on different features or fixes without disturbing the main codebase.</p>
+            <ul>
+                <li><code>git branch</code>: Lists all branches or creates a new one.</li>
+                <li><code>git checkout</code>: Switches between branches so you can work on multiple tasks in parallel.</li>
+                <li><code>git merge</code>: Brings changes from one branch into another (usually into main or master).</li>
+            </ul>
+            <p>Branching is powerful because it enables safe experimentation — if something breaks, the main line of development
+                remains stable. Just remember to regularly merge and resolve conflicts to keep branches from diverging too far.
+            </p>
+        </section>
+        
+        <section class="main-section" id="Working_with_Remotes">
+            <header>
+                <h2>Working with Remotes</h2>
+            </header>
+            <p>A remote repository (like on GitHub) lets you share your code with others.</p>
+            <ul>
+                <li><code>git remote add</code>: Links your local repository to a GitHub repository.</li>
+                <li><code>git push</code>: Uploads your commits to the remote.</li>
+                <li><code>git pull</code>: Fetches the latest changes and merges them into your local branch.</li>
+                <li><code>git fetch</code>: Retrieves updates without merging, letting you review them first.</li>
+                <li><code>git clone</code>: Makes a full copy of a remote repository onto your local machine.</li>
+            </ul>
+            <p>Using remotes ensures that your work stays backed up and synchronized with the team’s collective progress.</p>
+        </section>
+        
+        <section class="main-section" id="Resolving_Merge_Conflicts">
+            <header>
+                <h2>Resolving Merge Conflicts</h2>
+            </header>
+            <p>Merge conflicts occur when Git cannot automatically reconcile changes between branches. This usually happens when
+                two branches modify the same lines in a file.</p>
+            <p>To resolve a merge conflict:</p>
+            <ul>
+                <li>Open the conflicting files and edit them to combine the changes.</li>
+                <li>After fixing, use <code>git add &lt;file&gt;</code> to mark the conflict as resolved.</li>
+                <li>Finally, use <code>git commit</code> to complete the merge.</li>
+            </ul>
+            <p>To avoid frequent conflicts, communicate with your team, pull regularly, and keep branches short-lived.</p>
+        </section>
+        
+        <section class="main-section" id="Pull_Requests_and_Collaboration">
+            <header>
+                <h2>Pull Requests and Collaboration</h2>
+            </header>
+            <p>Pull requests (PRs) are a collaboration feature on GitHub that let you propose changes to a repository.</p>
+            <p>After pushing your branch to GitHub, you can open a pull request to:</p>
+            <ul>
+                <li>Show others the changes you’ve made</li>
+                <li>Request feedback or reviews</li>
+                <li>Start a discussion about the modifications</li>
+            </ul>
+            <p>Other contributors can comment, suggest improvements, or approve the PR. Once approved, the changes can be merged
+                into the main branch.</p>
+            <p>Best practices include writing clear, descriptive PR titles, linking relevant issues, and being responsive to
+                requested changes. Pull requests help maintain code quality and ensure that all changes are reviewed before
+                being integrated.</p>
+        </section>
+        
+        <section class="main-section" id="Git_Revert_and_Reset">
+            <header>
+                <h2>Git Revert and Reset</h2>
+            </header>
+            <p>Sometimes you need to undo changes. Git offers two main ways: <code>git revert</code> and <code>git reset</code>.
+            </p>
+            <ul>
+                <li><code>git revert &lt;commit&gt;</code>: Creates a new commit that undoes the changes from a previous commit.
+                    This is a safe option because it preserves project history.</li>
+                <li><code>git reset --hard &lt;commit&gt;</code>: Resets your repository to a specific commit, discarding all
+                    commits and changes after it. Use this carefully, as it can permanently remove work.</li>
+            </ul>
+            <p>Understanding when to use revert vs. reset helps you recover gracefully from mistakes.</p>
+        </section>
+        
+        <section class="main-section" id="Git_Tags_and_Releases">
+            <header>
+                <h2>Git Tags and Releases</h2>
+            </header>
+            <p>Tags are used to mark specific points in your commit history, often to label releases or important milestones.
+            </p>
+            <ul>
+                <li><code>git tag v1.0.0</code>: Creates a new tag called <code>v1.0.0</code> on your current commit.</li>
+                <li><code>git push origin v1.0.0</code>: Pushes the tag to the remote repository so others can see it.</li>
+                <li>On GitHub, you can also create releases linked to tags, adding release notes and downloadable assets.</li>
+            </ul>
+            <p>Tags and releases help teams coordinate and communicate about stable versions of their projects.</p>
+        </section>
+          
+    </main>
 </body>
 </html>
