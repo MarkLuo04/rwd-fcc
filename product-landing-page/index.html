@@ -10,11 +10,11 @@
 
 <body>
     <header id="header">
-        <img id="header-image" src="https://example.com/logo.png" alt="Prestige Timepieces Logo">
+        <img id="header-img" src="./images/luxury.png" alt="Prestige Timepieces Logo">
         <nav id="nav-bar">
-            <a class="nav-link" href="#craftsmanship">Craftsmanship</a>
-            <a class="nav-link" href="#service">Service</a>
-            <a class="nav-link" href="#guarantee">Guarantee</a>
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#demo">Showcase</a>
+            <a class="nav-link" href="#pricing">Pricing</a>
         </nav>
     </header>
 
@@ -23,7 +23,7 @@
             <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <div class="email">
                     <label for="email">Join our Collector’s List</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                 </div>
                 <div class="submit">
                     <input type="submit" id="submit" value="Subscribe">
@@ -31,19 +31,22 @@
             </form>
         </section>
 
-        <section id="craftsmanship">
+        <section id="materials">
+            <img src="./images/advance-technology.png" alt="Materials Icon">
             <h2>Exquisite Craftsmanship</h2>
             <p>Our luxury watches are meticulously crafted from premium materials including sapphire crystal, Italian
                 leather, and precision Swiss movements, ensuring elegance and durability.</p>
         </section>
 
-        <section id="service">
+        <section id="shipping">
+            <img src="./images/delivery-truck.png" alt="Shipping Icon">
             <h2>White-Glove Service</h2>
             <p>Enjoy complimentary worldwide shipping and exclusive concierge service. Every timepiece is carefully
                 packaged and delivered with priority handling to your doorstep.</p>
         </section>
 
-        <section id="guarantee">
+        <section id="qa">
+            <img src="./images/quality.png" alt="Quality Icon">
             <h2>Swiss Certified Guarantee</h2>
             <p>Each watch undergoes rigorous quality control and is backed by a 5-year international warranty for
                 complete peace of mind.</p>
@@ -51,10 +54,48 @@
 
         <section id="demo">
             <h2>Experience the Legacy</h2>
-            <iframe id="video" src="https://www.youtube.com/embed/Dx-GeSMu-jU title=" Luxury Watch Showcase
+            <iframe id="video" src="https://www.youtube.com/embed/Dx-GeSMu-jU" title="Luxury Watch Showcase"
                 frameborder="0" allowfullscreen></iframe>
         </section>
+
+        <section id="pricing">
+            <h2>Choose Your Timepiece</h2>
+            <div class="pricing-option">
+                <h3>Classic</h3>
+                <p class="price">$2,500</p>
+                <ul>
+                    <li>Italian Leather Strap</li>
+                    <li>Sapphire Crystal Glass</li>
+                    <li>2-Year Warranty</li>
+                </ul>
+                <button>Select</button>
+            </div>
+            <div class="pricing-option">
+                <h3>Prestige</h3>
+                <p class="price">$5,800</p>
+                <ul>
+                    <li>18K Gold Accents</li>
+                    <li>Swiss Automatic Movement</li>
+                    <li>5-Year Warranty</li>
+                </ul>
+                <button>Select</button>
+            </div>
+            <div class="pricing-option">
+                <h3>Signature Edition</h3>
+                <p class="price">$12,000</p>
+                <ul>
+                    <li>Custom Engraving</li>
+                    <li>Exclusive Design</li>
+                    <li>Lifetime Service</li>
+                </ul>
+                <button>Select</button>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Prestige Timepieces | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
 </body>
 
 </html>
